@@ -71,7 +71,7 @@ window.addEventListener('popstate', (event) => {
 
     router();
     console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-  });
+});
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -80,8 +80,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     document.body.addEventListener("click", (e) => {
         if(e.target.matches("[data-link]")){
             e.preventDefault();
-            //e.stopPropagation(); // delete this
-            
             navigateTo(e.target.href);
         }
     });

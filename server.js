@@ -20,6 +20,21 @@ app.get("/*", (req, res ) => {
     
 })
 
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded());
+
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
+
+
+
+app.post("/*", (req, res ) => {
+    console.log(req.body);
+    
+    res.status(200).json({name:"Server sending this name and age",age:35});
+ 
+    
+})
 
 
 
