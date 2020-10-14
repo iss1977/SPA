@@ -49,7 +49,7 @@ const router = async ()=>{
         // if match is undefined, means that we couldn't find the requested route, and will default to first item in routes array.
 
     if (typeof match === 'undefined') {
-        console.log('%c Undefined route. Redirecting to : '+routes[0].path, 'background: #eff; color:red; padding: 2px; border:2px solid red');
+        console.log('%c Undefined route. Redirecting to : '+routes[0].path, 'background: #eff; color:red; padding: 2px; border:5px solid red; font-weight:bold; font-size: 1.1rem;');
 
         match = {
             route : routes[0],
